@@ -8,8 +8,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.server.store.DaoRegistry;
-import org.eclipse.emf.texo.test.model.base.identifiable.dao.IdentifiableDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -107,9 +105,6 @@ public class IdentifiableModelPackage extends ModelPackage {
 		ModelResolver.getInstance().registerClassModelMapping(
 				Identifiable.class, modelPackage.getIdentifiableEClass(),
 				modelPackage);
-
-		DaoRegistry.getInstance().registerDao(Identifiable.class,
-				IdentifiableDao.class);
 
 		// and return ourselves
 		return modelPackage;

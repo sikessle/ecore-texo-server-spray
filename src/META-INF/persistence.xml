@@ -4,39 +4,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	
-	<persistence-unit name="derby2">
-	
-		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<!-- NOT REQUIRED IF USING JPA ANNOTATED CODE -->
-		<!-- mapping-file>META-INF/identifiable-orm.xml</mapping-file-->
-		<!-- mapping-file>META-INF/library-orm.xml</mapping-file-->
-		<!-- Here must be noted all generated classes to persist -->
-		<class>org.eclipse.emf.texo.test.mode.base.identifiable.Identifiable</class>
-		<class>de.konstanz.htwg.spray.petrinet.InputArc</class>
-		<class>de.konstanz.htwg.spray.petrinet.Net</class>
-		<class>de.konstanz.htwg.spray.petrinet.OutputArc</class>
-		<class>de.konstanz.htwg.spray.petrinet.Place</class>
-		<class>de.konstanz.htwg.spray.petrinet.Token</class>
-		<class>de.konstanz.htwg.spray.petrinet.Transition</class>
-		<properties>
-            <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.DerbyPlatform"/>
-            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:derby:/tmp/sprayDB;create=true"/>
- 
-            <!-- EclipseLink should create the database schema automatically -->
-            <property name="eclipselink.ddl-generation" value="create-tables" />
-            <property name="eclipselink.ddl-generation.output-mode" value="database" />
-		</properties>
-
-	</persistence-unit>
-
-	
 	<persistence-unit name="mysql">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<!-- NOT REQUIRED IF USING JPA ANNOTATED CODE -->
-        <!-- mapping-file>META-INF/identifiable-orm.xml</mapping-file-->
-        <!-- mapping-file>META-INF/library-orm.xml</mapping-file-->
         <!-- Here must be noted all generated classes to persist -->
         <class>org.eclipse.emf.texo.test.mode.base.identifiable.Identifiable</class>
         <class>de.konstanz.htwg.spray.petrinet.InputArc</class>
@@ -52,10 +22,11 @@
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="root"/>
 
-            <!-- EclipseLink should create the database schema automatically -->
-
             <property name="eclipselink.ddl-generation" value="create-tables" />
-            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+            <property name="eclipselink.ddl-generation.output-mode" value="sql-script" />
+            <property name="eclipselink.create-ddl-jdbc-file-name" value="create-scheme.sql" />
+            <property name="eclipselink.drop-ddl-jdbc-file-name" value="drop-scheme.sql" />
+            <property name="eclipselink.application-location" value="C:\tmp\" />
 		</properties>
 
 	</persistence-unit>
