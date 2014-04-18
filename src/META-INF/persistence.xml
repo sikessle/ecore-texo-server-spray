@@ -3,12 +3,12 @@
 	xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	
+
 	<persistence-unit name="mysql">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <!-- Here must be noted all generated classes to persist -->
-        <class>org.eclipse.emf.texo.test.mode.base.identifiable.Identifiable</class>
+        <class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
         <class>de.konstanz.htwg.spray.petrinet.InputArc</class>
         <class>de.konstanz.htwg.spray.petrinet.Net</class>
         <class>de.konstanz.htwg.spray.petrinet.OutputArc</class>

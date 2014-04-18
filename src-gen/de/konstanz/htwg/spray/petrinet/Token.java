@@ -1,6 +1,7 @@
 package de.konstanz.htwg.spray.petrinet;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -10,6 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "petriNet_Token")
+@Table(name = "petriNet_Token")
 public class Token extends Identifiable {
 
 	/**

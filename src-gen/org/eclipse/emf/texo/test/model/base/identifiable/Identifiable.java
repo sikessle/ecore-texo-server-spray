@@ -1,9 +1,12 @@
 package org.eclipse.emf.texo.test.model.base.identifiable;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Version;
 
 /**
  * A representation of the model object '<em><b>Identifiable</b></em>'. <!--
@@ -11,8 +14,8 @@ import javax.persistence.Table;
  * 
  * @generated
  */
-@Entity(name = "identifiable_Identifiable")
-@Table(name = "identifiable_Identifiable")
+@MappedSuperclass()
+@Access(AccessType.FIELD)
 public class Identifiable {
 
 	/**
@@ -20,8 +23,8 @@ public class Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Basic()
-	@Column(name = "db_Id")
+	@Id()
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long db_Id = null;
 
 	/**
@@ -29,8 +32,8 @@ public class Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Basic()
-	@Column(name = "db_version")
+	@Version()
+	@Access(AccessType.FIELD)
 	private Integer db_version = null;
 
 	/**

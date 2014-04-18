@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -18,6 +19,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "petriNet_Transition")
+@Table(name = "petriNet_Transition")
 public class Transition extends Identifiable {
 
 	/**
@@ -26,7 +28,7 @@ public class Transition extends Identifiable {
 	 * @generated
 	 */
 	@Basic()
-	@Column(name = "name", nullable = true)
+	@Column(name = "name")
 	private String name = null;
 
 	/**

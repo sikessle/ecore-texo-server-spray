@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -16,6 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "petriNet_OutputArc")
+@Table(name = "petriNet_OutputArc")
 public class OutputArc extends Identifiable {
 
 	/**
