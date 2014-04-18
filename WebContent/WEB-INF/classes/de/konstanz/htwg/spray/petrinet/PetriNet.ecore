@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PetriNet" nsURI="http://www.htwg-konstanz.de/spray/petriNet"
+    nsPrefix="petriNet">
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="name"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="token" upperBound="-1"
+        eType="#//Token" containment="true">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="token"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputArc" upperBound="-1"
+        eType="#//InputArc">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="inputArc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputArc" upperBound="-1"
+        eType="#//OutputArc">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="outputArc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="name"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputArc" upperBound="-1"
+        eType="#//InputArc">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="inputArc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputArc" upperBound="-1"
+        eType="#//OutputArc">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="outputArc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputArc" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="place" upperBound="-1"
+        eType="#//Place">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="place"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
+        eType="#//Transition">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="transition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputArc" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="place" upperBound="-1"
+        eType="#//Place">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="place"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transition" upperBound="-1"
+        eType="#//Transition">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="transition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Token" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Net" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="place" upperBound="-1"
+        eType="#//Place" containment="true">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="place"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="token" upperBound="-1"
+        eType="#//Token" containment="true">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="token"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputArc" upperBound="-1"
+        eType="#//InputArc" containment="true">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="inputArc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputArc" upperBound="-1"
+        eType="#//OutputArc" containment="true">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="outputArc"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
