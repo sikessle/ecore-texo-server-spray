@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>texo.example.petrinet</name>
+	<name>ecore.texo.server.spray</name>
 	<comment></comment>
 	<projects>
 		<project>org.eclipse.emf.texo</project>
