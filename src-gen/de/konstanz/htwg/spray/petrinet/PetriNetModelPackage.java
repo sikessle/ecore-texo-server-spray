@@ -9,8 +9,15 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
+import de.konstanz.htwg.spray.petrinet.dao.InputArcDao;
+import de.konstanz.htwg.spray.petrinet.dao.NetDao;
+import de.konstanz.htwg.spray.petrinet.dao.OutputArcDao;
+import de.konstanz.htwg.spray.petrinet.dao.PlaceDao;
+import de.konstanz.htwg.spray.petrinet.dao.TokenDao;
+import de.konstanz.htwg.spray.petrinet.dao.TransitionDao;
 
 /**
  * The <b>Package</b> for the model '<em><b>PetriNet</b></em>'. It contains
@@ -328,6 +335,16 @@ public class PetriNetModelPackage extends ModelPackage {
 				modelPackage.getTransitionEClass(), modelPackage);
 		ModelResolver.getInstance().registerClassModelMapping(Net.class,
 				modelPackage.getNetEClass(), modelPackage);
+
+		DaoRegistry.getInstance().registerDao(Place.class, PlaceDao.class);
+		DaoRegistry.getInstance().registerDao(Token.class, TokenDao.class);
+		DaoRegistry.getInstance()
+				.registerDao(InputArc.class, InputArcDao.class);
+		DaoRegistry.getInstance().registerDao(OutputArc.class,
+				OutputArcDao.class);
+		DaoRegistry.getInstance().registerDao(Transition.class,
+				TransitionDao.class);
+		DaoRegistry.getInstance().registerDao(Net.class, NetDao.class);
 
 		// and return ourselves
 		return modelPackage;
