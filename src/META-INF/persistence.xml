@@ -4,6 +4,29 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
+	<!--  For testing purposes only  -->
+	<persistence-unit name="derby2">
+	
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>org.eclipse.emf.texo.test.mode.base.identifiable.Identifiable</class>
+        <class>de.konstanz.htwg.spray.petrinet.InputArc</class>
+        <class>de.konstanz.htwg.spray.petrinet.Net</class>
+        <class>de.konstanz.htwg.spray.petrinet.OutputArc</class>
+        <class>de.konstanz.htwg.spray.petrinet.Place</class>
+        <class>de.konstanz.htwg.spray.petrinet.Token</class>
+        <class>de.konstanz.htwg.spray.petrinet.Transition</class>
+		
+		<properties>
+            <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.DerbyPlatform"/>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:/tmp/sprayDB;create=true"/>
+            
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+		</properties>
+
+	</persistence-unit>
+
 	<persistence-unit name="mysql">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
