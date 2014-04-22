@@ -46,10 +46,14 @@
             <property name="javax.persistence.jdbc.password" value="root"/>
 
             <property name="eclipselink.ddl-generation" value="create-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+            
+           <!-- Not needed anymore, CustomBaseDao.java takes care of clean deletions 
             <property name="eclipselink.ddl-generation.output-mode" value="sql-script" />
             <property name="eclipselink.create-ddl-jdbc-file-name" value="create-scheme.sql" />
             <property name="eclipselink.drop-ddl-jdbc-file-name" value="drop-scheme.sql" />
             <property name="eclipselink.application-location" value="/tmp/" />
+            -->
 		</properties>
 
 	</persistence-unit>
