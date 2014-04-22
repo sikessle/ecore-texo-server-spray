@@ -1,7 +1,7 @@
 package de.konstanz.htwg.spray.petrinet.dao;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.server.store.BaseDao;
+import org.eclipse.emf.texo.web.example.CustomBaseDao;
 import de.konstanz.htwg.spray.petrinet.InputArc;
 import de.konstanz.htwg.spray.petrinet.PetriNetModelPackage;
 
@@ -10,7 +10,7 @@ import de.konstanz.htwg.spray.petrinet.PetriNetModelPackage;
  * 
  * @generated
  */
-public class InputArcDao extends BaseDao<InputArc> {
+public class InputArcDao extends CustomBaseDao<InputArc> {
 
 	/**
 	 * @generated

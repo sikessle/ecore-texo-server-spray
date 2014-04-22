@@ -1,7 +1,7 @@
 package de.konstanz.htwg.spray.petrinet.dao;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.server.store.BaseDao;
+import org.eclipse.emf.texo.web.example.CustomBaseDao;
 import de.konstanz.htwg.spray.petrinet.PetriNetModelPackage;
 import de.konstanz.htwg.spray.petrinet.Token;
 
@@ -10,7 +10,7 @@ import de.konstanz.htwg.spray.petrinet.Token;
  * 
  * @generated
  */
-public class TokenDao extends BaseDao<Token> {
+public class TokenDao extends CustomBaseDao<Token> {
 
 	/**
 	 * @generated

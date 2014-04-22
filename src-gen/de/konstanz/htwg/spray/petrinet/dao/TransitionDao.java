@@ -1,15 +1,16 @@
 package de.konstanz.htwg.spray.petrinet.dao;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.server.store.BaseDao;
+import org.eclipse.emf.texo.web.example.CustomBaseDao;
 import de.konstanz.htwg.spray.petrinet.PetriNetModelPackage;
 import de.konstanz.htwg.spray.petrinet.Transition;
-import java.util.*;
-/* * The Dao implementation for the model object '<em><b>Transition</b></em>'.
+
+/**
+ * The Dao implementation for the model object '<em><b>Transition</b></em>'.
  * 
  * @generated
  */
-public class TransitionDao extends BaseDao<Transition> {
+public class TransitionDao extends CustomBaseDao<Transition> {
 
 	/**
 	 * @generated
@@ -19,18 +20,6 @@ public class TransitionDao extends BaseDao<Transition> {
 		return Transition.class;
 	}
 
-	@Override
-	public void remove(Transition t){
-		t.setName("hahahahahaha");
-		return;
-	}
-	
-	@Override
-	public void remove(List<Transition> t){
-		
-		return;
-	}
-	
 	/**
 	 * @generated
 	 */

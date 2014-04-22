@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -19,7 +15,6 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "petriNet_Transition")
-@Table(name = "petriNet_Transition")
 public class Transition extends Identifiable {
 
 	/**
@@ -28,7 +23,6 @@ public class Transition extends Identifiable {
 	 * @generated
 	 */
 	@Basic()
-	@Column(name = "name")
 	private String name = null;
 
 	/**
@@ -38,7 +32,6 @@ public class Transition extends Identifiable {
 	 */
 	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
 			CascadeType.REFRESH })
-	@JoinTable(joinColumns = { @JoinColumn(name = "petriNet_Transition_id") }, inverseJoinColumns = { @JoinColumn(name = "petriNet_InputArc_id") }, name = "petriNet_Transition_inputArc")
 	private List<InputArc> inputArc = new ArrayList<InputArc>();
 
 	/**
@@ -48,7 +41,6 @@ public class Transition extends Identifiable {
 	 */
 	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
 			CascadeType.REFRESH })
-	@JoinTable(joinColumns = { @JoinColumn(name = "petriNet_Transition_id") }, inverseJoinColumns = { @JoinColumn(name = "petriNet_OutputArc_id") }, name = "petriNet_Transition_outputArc")
 	private List<OutputArc> outputArc = new ArrayList<OutputArc>();
 
 	/**
