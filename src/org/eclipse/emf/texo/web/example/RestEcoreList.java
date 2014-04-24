@@ -10,6 +10,10 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.server.service.ServiceModelPackageRegistry;
 import org.json.JSONArray;
 
+/**
+ * Returns a json array of all ecore names which
+ * are known by the server.
+ */
 public class RestEcoreList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
